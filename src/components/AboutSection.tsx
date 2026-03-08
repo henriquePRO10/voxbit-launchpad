@@ -23,16 +23,18 @@ const AboutSection = () => {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <div className="relative bg-gradient-card border border-border rounded-3xl overflow-hidden shadow-card">
-            {/* Top gradient accent */}
-            <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-red opacity-20" />
-            <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent to-card" style={{ top: '6rem' }} />
-
-            <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 p-8 pt-20 md:pt-8">
-              {/* Photo */}
-              <div className="relative flex-shrink-0">
-                <div className="absolute -inset-2 bg-gradient-red rounded-2xl opacity-40 blur-lg" />
-                <div className="relative w-52 h-64 rounded-2xl overflow-hidden border-2 border-primary/30">
+          <div className="relative pt-32 md:pt-0 md:pl-32">
+            {/* Floating photo - overlapping the card */}
+            <div className="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 -top-4 md:top-1/2 md:-translate-y-1/2 md:-left-12 z-20">
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2, type: "spring", stiffness: 120 }}
+                className="relative"
+              >
+                <div className="absolute -inset-3 bg-gradient-red rounded-2xl opacity-40 blur-xl animate-glow-pulse" />
+                <div className="relative w-44 h-56 md:w-52 md:h-64 rounded-2xl overflow-hidden border-2 border-primary/40 shadow-red">
                   <img
                     src={founderImg}
                     alt="Fundador da VoxBit Soluções"
@@ -44,10 +46,14 @@ const AboutSection = () => {
                 <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-gradient-red text-primary-foreground px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap shadow-lg">
                   CEO & Fundador
                 </div>
-              </div>
+              </motion.div>
+            </div>
 
-              {/* Content */}
-              <div className="flex-1 text-center md:text-left space-y-4">
+            {/* Card */}
+            <div className="relative bg-gradient-card border border-border rounded-3xl overflow-hidden shadow-card">
+              <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-red opacity-10" />
+
+              <div className="relative z-10 p-8 pt-8 md:pl-32 space-y-4 text-center md:text-left">
                 <h3 className="text-2xl font-heading font-bold text-foreground">
                   Sua história começa aqui
                 </h3>
