@@ -5,7 +5,7 @@ const AboutSection = () => {
   return (
     <section id="sobre" className="relative min-h-[80vh] flex items-center overflow-hidden">
       {/* Background base - matching CEO photo dark red/maroon */}
-      <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, hsl(0, 30%, 10%), hsl(0, 40%, 15%), hsl(0, 30%, 8%))' }} />
+      <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, hsl(0, 0%, 4%) 0%, hsl(0, 50%, 12%) 40%, hsl(4, 77%, 20%) 70%, hsl(0, 40%, 10%) 100%)' }} />
 
       {/* Photo on the right side */}
       <div className="absolute top-0 right-0 w-1/2 h-full hidden md:block">
