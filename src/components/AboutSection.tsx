@@ -4,16 +4,18 @@ import founderImg from "@/assets/founder.png";
 const AboutSection = () => {
   return (
     <section id="sobre" className="relative min-h-[80vh] flex items-center overflow-hidden">
-      {/* Full background image */}
-      <div className="absolute inset-0">
+      {/* Background base */}
+      <div className="absolute inset-0 bg-gradient-dark" />
+
+      {/* Photo on the right side */}
+      <div className="absolute top-0 right-0 w-1/2 h-full hidden md:block">
         <img
           src={founderImg}
           alt="Fundador da VoxBit Soluções"
           className="w-full h-full object-cover object-top"
         />
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
       </div>
 
       {/* Content */}
