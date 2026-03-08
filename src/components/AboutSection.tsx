@@ -4,8 +4,8 @@ import founderImg from "@/assets/founder.png";
 const AboutSection = () => {
   return (
     <section id="sobre" className="relative min-h-[80vh] flex items-center overflow-hidden">
-      {/* Background base */}
-      <div className="absolute inset-0 bg-gradient-dark" />
+      {/* Background base - matching CEO photo dark red/maroon */}
+      <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, hsl(0, 30%, 10%), hsl(0, 40%, 15%), hsl(0, 30%, 8%))' }} />
 
       {/* Photo on the right side */}
       <div className="absolute top-0 right-0 w-1/2 h-full hidden md:block">
@@ -14,8 +14,8 @@ const AboutSection = () => {
           alt="Fundador da VoxBit Soluções"
           className="w-full h-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(0,30%,10%)] via-[hsl(0,30%,10%)]/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(0,30%,10%)] via-transparent to-[hsl(0,30%,10%)]/30" />
       </div>
 
       {/* Content */}
