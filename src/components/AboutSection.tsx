@@ -25,7 +25,7 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-xl space-y-6"
+          className="md:max-w-[45%] max-w-xl space-y-6"
         >
           <span className="text-sm text-primary font-semibold uppercase tracking-widest">
             Quem Somos
