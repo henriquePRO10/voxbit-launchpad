@@ -36,10 +36,9 @@ const AboutSection = () => {
                   <img
                     src={founderImg}
                     alt="Fundador da VoxBit Soluções"
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover"
+                    style={{ objectPosition: '50% 15%', transform: 'scale(1.3)' }}
                   />
-                  {/* Overlay gradient */}
-                  <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-card to-transparent" />
                 </div>
                 {/* Floating badge */}
                 <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-gradient-red text-primary-foreground px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap shadow-lg">
