@@ -11,14 +11,14 @@ const CtaSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="max-w-3xl mx-auto text-center"
         >
           {/* Urgency badge */}
           <motion.div
-            initial={{ scale: 0.9 }}
+            initial={false}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-full px-5 py-2 mb-8"

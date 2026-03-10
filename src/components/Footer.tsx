@@ -1,4 +1,4 @@
-import logoRound from "@/assets/logo-round.png";
+import logoRound from "@/assets/logo-round-96.webp";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img src={logoRound} alt="VoxBit" className="h-10 w-10 rounded-full" />
+              <img src={logoRound.src} alt="VoxBit" loading="lazy" decoding="async" width={40} height={40} className="h-10 w-10 rounded-full" />
               <span className="font-heading font-bold text-xl text-foreground">
                 VOX<span className="text-gradient-red">BIT</span>
               </span>

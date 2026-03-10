@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Zap } from "lucide-react";
-import bgImage from "@/assets/fundo.png";
-import logo from "@/assets/logo.png";
+import bgImage from "@/assets/fundo.webp";
+const logo = "/logo-hero.webp";
 
 const HeroSection = () => {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <img src={bgImage} alt="" className="w-full h-full object-cover opacity-40" />
+        <img src={bgImage.src} alt="" fetchPriority="low" className="w-full h-full object-cover opacity-40" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
       </div>
 
@@ -19,13 +19,13 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
+            initial={false}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="space-y-8"
           >
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
               className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2"
@@ -75,7 +75,7 @@ const HeroSection = () => {
 
           {/* Logo showcase */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={false}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="relative hidden min-h-[560px] lg:flex justify-center items-center"
@@ -96,12 +96,17 @@ const HeroSection = () => {
               <img
                 src={logo}
                 alt="VoxBit Soluções"
+                loading="eager"
+                fetchPriority="high"
+                width={640}
+                height={726}
                 className="hero-logo-ghost absolute left-1/2 top-1/2 h-[28rem] w-[28rem] -translate-x-1/2 -translate-y-1/2 object-contain"
               />
               <img
                 src={logo}
                 alt=""
                 aria-hidden="true"
+                loading="lazy"
                 className="hero-logo-core absolute left-1/2 top-1/2 h-[25rem] w-[25rem] -translate-x-1/2 -translate-y-1/2 object-contain"
               />
               <div className="hero-logo-vignette absolute inset-0 rounded-[3rem]" />
