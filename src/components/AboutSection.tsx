@@ -1,21 +1,19 @@
 import { motion } from "framer-motion";
-import founderImg from "@/assets/founder.png";
 
 const AboutSection = () => {
   return (
-    <section id="sobre" className="relative min-h-[80vh] flex items-center overflow-hidden">
+    <section id="sobre" className="group relative min-h-[80vh] flex items-center overflow-hidden">
       {/* Background base - matching CEO photo dark red/maroon */}
       <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, hsl(0, 0%, 4%) 0%, hsl(0, 50%, 12%) 40%, hsl(4, 77%, 20%) 70%, hsl(0, 40%, 10%) 100%)' }} />
 
       {/* Photo on the right side */}
       <div className="absolute top-0 right-0 w-1/2 h-full hidden md:block">
         <img
-          src={founderImg}
+          src="/Henrique.png"
           alt="Fundador da VoxBit Soluções"
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-cover object-top grayscale contrast-110 transition-all duration-500 group-hover:grayscale-0 group-hover:contrast-100"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(0,30%,10%)] via-[hsl(0,30%,10%)]/60 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(0,30%,10%)] via-transparent to-[hsl(0,30%,10%)]/30" />
+        <div className="pointer-events-none absolute inset-0 bg-black/20 transition-opacity duration-500 group-hover:opacity-0" />
       </div>
 
       {/* Content */}

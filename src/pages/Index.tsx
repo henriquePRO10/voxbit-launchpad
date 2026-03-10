@@ -5,6 +5,7 @@ import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <AboutSection />
       <CtaSection />
       <Footer />
+      <BackToTop />
     </div>
   );
 };

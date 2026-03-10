@@ -78,11 +78,41 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="hidden lg:flex justify-center items-center"
+            className="relative hidden min-h-[560px] lg:flex justify-center items-center"
           >
-            <div className="relative">
-              <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl scale-110" />
-              <img src={logo} alt="VoxBit Soluções" className="relative w-72 h-72 object-contain drop-shadow-2xl" />
+            <div className="hero-logo-stage pointer-events-none absolute inset-0" />
+
+            <div className="hero-logo-orb absolute left-1/2 top-1/2 h-[30rem] w-[30rem] -translate-x-1/2 -translate-y-1/2 rounded-full" />
+
+            <motion.div
+              animate={{ y: [0, -14, 0], rotate: [0, 2, 0] }}
+              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+              className="relative flex h-[30rem] w-[30rem] items-center justify-center"
+            >
+              <div className="hero-logo-beam absolute inset-y-10 left-12 w-24 rounded-full blur-3xl" />
+              <div className="hero-logo-beam absolute bottom-16 right-8 h-40 w-40 rounded-full blur-3xl" />
+              <div className="hero-logo-shell absolute inset-8 rounded-[3rem]" />
+              <div className="hero-logo-grid absolute inset-14 rounded-[2.5rem]" />
+              <img
+                src={logo}
+                alt="VoxBit Soluções"
+                className="hero-logo-ghost absolute left-1/2 top-1/2 h-[28rem] w-[28rem] -translate-x-1/2 -translate-y-1/2 object-contain"
+              />
+              <img
+                src={logo}
+                alt=""
+                aria-hidden="true"
+                className="hero-logo-core absolute left-1/2 top-1/2 h-[25rem] w-[25rem] -translate-x-1/2 -translate-y-1/2 object-contain"
+              />
+              <div className="hero-logo-vignette absolute inset-0 rounded-[3rem]" />
+            </motion.div>
+
+            <div className="hero-logo-accent absolute right-10 top-16 h-28 w-28 rounded-full blur-3xl" />
+            <div className="hero-logo-accent absolute bottom-10 left-6 h-36 w-36 rounded-full blur-[100px]" />
+            <div className="hero-logo-noise absolute inset-0 rounded-[3rem]" />
+
+            <div className="absolute bottom-10 right-12 rounded-full border border-white/10 bg-black/20 px-4 py-2 backdrop-blur-md">
+              <span className="text-xs font-medium uppercase tracking-[0.35em] text-white/55">Identidade digital viva</span>
             </div>
           </motion.div>
         </div>
