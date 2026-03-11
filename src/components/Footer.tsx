@@ -1,6 +1,13 @@
 import logoRound from "@/assets/logo-round-96.webp";
 import { Mail, Phone, MapPin } from "lucide-react";
 
+const quickLinks = [
+  { label: "Início", href: "#inicio" },
+  { label: "Serviços", href: "#servicos" },
+  { label: "Sobre", href: "#sobre" },
+  { label: "Contato", href: "#contato" },
+];
+
 const Footer = () => {
   return (
     <footer className="border-t border-border bg-secondary/30 py-12">
@@ -22,9 +29,9 @@ const Footer = () => {
           {/* Links */}
           <div className="space-y-4">
             <h4 className="font-heading font-bold text-foreground">Links Rápidos</h4>
-            {["Início", "Serviços", "Sobre", "Contato"].map((link) => (
-              <a key={link} href={`#${link.toLowerCase()}`} className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
-                {link}
+            {quickLinks.map((link) => (
+              <a key={link.href} href={link.href} className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
+                {link.label}
               </a>
             ))}
           </div>

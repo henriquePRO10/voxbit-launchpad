@@ -1,13 +1,21 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
-import "@fontsource/outfit/latin-400.css";
-import "@fontsource/outfit/latin-600.css";
-import "@fontsource/outfit/latin-700.css";
-import "@fontsource/outfit/latin-800.css";
-import "@fontsource/space-grotesk/latin-400.css";
-import "@fontsource/space-grotesk/latin-500.css";
-import "@fontsource/space-grotesk/latin-700.css";
+import { Outfit, Space_Grotesk } from "next/font/google";
 import "@/index.css";
+
+const headingFont = Outfit({
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "800"],
+  variable: "--font-heading",
+  display: "swap",
+});
+
+const bodyFont = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-body",
+  display: "swap",
+});
 
 const siteUrl = "https://voxbitsolucoes.com.br";
 
@@ -61,12 +69,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className={`${headingFont.variable} ${bodyFont.variable}`}>
       <head>
         <link rel="preload" as="image" href="/logo-hero.webp" fetchPriority="high" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       </head>
-      <body>
+      <body className="font-body antialiased">
         {children}
         <Analytics />
       </body>
