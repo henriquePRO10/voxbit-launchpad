@@ -2,6 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import LighthouseSection from "@/components/LighthouseSection";
 import TechMarquee from "@/components/TechMarquee";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
@@ -14,6 +15,7 @@ const HomePage = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
+      <LighthouseSection />
       <TechMarquee />
       <ServicesSection />
       <AboutSection />
