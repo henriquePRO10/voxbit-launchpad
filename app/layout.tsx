@@ -50,6 +50,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  verification: {
+    google: "_zz5IYh4t6xs_pzUqdSZFedbwbCpTetKIHByyrgFxXk",
+  },
   icons: {
     icon: [{ url: "/logo-round-96.webp", type: "image/webp" }],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
