@@ -2,3 +2,6 @@ ignoredBuiltDependencies:
   - '@swc/core'
   - esbuild
   - sharp
+
+onlyBuiltDependencies:
+  - '@parcel/watcher'
