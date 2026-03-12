@@ -1,73 +1,106 @@
-# Welcome to your Lovable project
+# VoxBit Launchpad
 
-## Project info
+Landing page institucional da VoxBit Solucoes, desenvolvida com foco em performance, SEO e conversao.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Visao geral
 
-## How can I edit this code?
+- Framework: Next.js 14 (App Router)
+- UI: React 18 + Tailwind CSS + componentes shadcn/ui
+- Animacoes: Framer Motion
+- Qualidade: ESLint + Vitest
+- Deploy: Vercel
 
-There are several ways of editing your application.
+Site principal: https://voxbitsolucoes.com.br
 
-**Use Lovable**
+## Requisitos
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- Node.js 20+
+- pnpm 10+
 
-Changes made via Lovable will be committed automatically to this repo.
+## Como rodar localmente
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+pnpm install
+pnpm dev
 ```
 
-**Edit a file directly in GitHub**
+App disponivel em:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- http://localhost:3000
 
-**Use GitHub Codespaces**
+## Scripts
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- `pnpm dev`: inicia ambiente de desenvolvimento
+- `pnpm build`: gera build de producao
+- `pnpm start`: sobe aplicacao em modo producao
+- `pnpm lint`: executa lint
+- `pnpm test`: executa testes uma vez
+- `pnpm test:watch`: executa testes em modo watch
 
-## What technologies are used for this project?
+## Estrutura do projeto
 
-This project is built with:
+```text
+app/
+	layout.tsx        # metadata SEO, fontes, schema.org e Analytics
+	page.tsx          # entrada da pagina principal
+	sitemap.ts        # sitemap dinamico
+	not-found.tsx     # pagina 404
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+src/
+	views/
+		HomePage.tsx    # composicao das secoes da landing
+	components/
+		HeroSection.tsx
+		ServicesSection.tsx
+		AboutSection.tsx
+		CtaSection.tsx
+		Footer.tsx
+		Navbar.tsx
+	test/
+		setup.ts
+		example.test.ts
 
-## How can I deploy this project?
+public/
+	robots.txt
+	*.webp
+```
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## Conteudo e personalizacao
 
-## Can I connect a custom domain to my Lovable project?
+Os principais textos da landing ficam nos componentes em `src/components`.
 
-Yes, you can!
+- Hero: `src/components/HeroSection.tsx`
+- Servicos: `src/components/ServicesSection.tsx`
+- Sobre: `src/components/AboutSection.tsx`
+- CTA/Contato: `src/components/CtaSection.tsx`
+- Navegacao e ancora: `src/components/Navbar.tsx`
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## SEO e metadados
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+O projeto ja vem com base de SEO configurada:
+
+- Metadata e Open Graph em `app/layout.tsx`
+- Structured Data (JSON-LD) de LocalBusiness em `app/layout.tsx`
+- Sitemap em `app/sitemap.ts`
+- Robots em `public/robots.txt`
+
+Opcional para producao:
+
+- Defina `NEXT_PUBLIC_SITE_URL` para controlar URLs canonicas do sitemap.
+
+## Deploy
+
+Configuracao pronta para Vercel em `vercel.json`:
+
+- Install command: `pnpm install --frozen-lockfile`
+- Build command: `pnpm build`
+- Framework: `nextjs`
+
+## Contato comercial
+
+- Email: voxbitinformatica@gmail.com
+- WhatsApp: https://wa.me/556696067576
+
+---
+
+Se quiser, posso adicionar no README uma secao de checklist de publicacao (SEO, performance, analytics, validacao mobile e revisao de copy) para padronizar cada release.
