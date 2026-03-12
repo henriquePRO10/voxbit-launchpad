@@ -40,7 +40,7 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-              Sites, sistemas web, SEO e presença digital para empresas em <strong>Sinop-MT</strong> e região. Desenvolvemos soluções completas com segurança, performance e foco em resultados.
+              Sites, sistemas web, SEO e presença digital. Desenvolvemos soluções completas com segurança, performance e foco em resultados.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
