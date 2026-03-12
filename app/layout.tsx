@@ -22,7 +22,7 @@ const siteUrl = "https://voxbitsolucoes.com.br";
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "VoxBit Solucoes",
+  name: "VoxBit Soluções",
   url: siteUrl,
   image: `${siteUrl}/logo-hero.webp`,
   logo: `${siteUrl}/logo-hero.webp`,
@@ -30,8 +30,16 @@ const structuredData = {
   telephone: "+55 66 99606-7576",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "",
+    addressLocality: "Sinop",
+    addressRegion: "MT",
     addressCountry: "BR",
   },
+  areaServed: [
+    { "@type": "City", name: "Sinop" },
+    { "@type": "State", name: "Mato Grosso" },
+    { "@type": "Country", name: "Brasil" },
+  ],
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+55 66 99606-7576",
@@ -39,14 +47,28 @@ const structuredData = {
     areaServed: "BR",
     availableLanguage: ["pt-BR"],
   },
+  priceRange: "$$",
+  description:
+    "Criação de sites, landing pages, sistemas web e SEO em Sinop-MT. Atendemos empresas em Sinop, Mato Grosso e região.",
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "VoxBit Solucoes | Sites, Sistemas Web e SEO",
+  title: "VoxBit Soluções | Sites e Sistemas Web em Sinop-MT",
   description:
-    "VoxBit Solucoes - Criacao de sites, landing pages, sistemas web completos e SEO. Tecnologia sob medida para o seu negocio crescer.",
-  authors: [{ name: "VoxBit Solucoes" }],
+    "VoxBit Soluções em Sinop-MT – Criação de sites, landing pages, sistemas web e SEO. Atendemos empresas em Sinop, Mato Grosso e região. Tecnologia sob medida para o seu negócio crescer.",
+  authors: [{ name: "VoxBit Soluções" }],
+  keywords: [
+    "sites em Sinop",
+    "criação de sites Sinop MT",
+    "agência digital Sinop",
+    "desenvolvimento web Sinop",
+    "sistemas web Sinop",
+    "SEO Sinop Mato Grosso",
+    "landing page Sinop MT",
+    "criação de sites Mato Grosso",
+    "VoxBit Soluções",
+  ],
   alternates: {
     canonical: "/",
   },
@@ -54,19 +76,30 @@ export const metadata: Metadata = {
     google: "_zz5IYh4t6xs_pzUqdSZFedbwbCpTetKIHByyrgFxXk",
   },
   icons: {
-    icon: [{ url: "/logo-round-96.webp", type: "image/webp" }],
+    shortcut: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/logo-round-96.webp", sizes: "96x96", type: "image/webp" },
+    ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   openGraph: {
-    title: "VoxBit Solucoes | Tecnologia sob medida",
+    title: "VoxBit Soluções | Sites e Sistemas Web em Sinop-MT",
     description:
-      "Sites, sistemas web, SEO e presenca digital. Solucoes completas com seguranca e performance.",
+      "Criação de sites, landing pages, sistemas web e SEO em Sinop-MT. Atendemos empresas em Mato Grosso. Tecnologia sob medida, performance e resultados.",
     url: siteUrl,
-    siteName: "VoxBit Solucoes",
+    siteName: "VoxBit Soluções",
     type: "website",
+    locale: "pt_BR",
   },
   twitter: {
     card: "summary_large_image",
+  },
+  other: {
+    "geo.region": "BR-MT",
+    "geo.placename": "Sinop, Mato Grosso",
+    "geo.position": "-11.8647;-55.5083",
+    ICBM: "-11.8647, -55.5083",
   },
 };
 

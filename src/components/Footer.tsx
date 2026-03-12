@@ -42,7 +42,7 @@ const Footer = () => {
             <div className="space-y-3 text-sm text-muted-foreground">
               <p className="flex items-center gap-2"><Mail size={14} className="text-primary" /> voxbitinformatica@gmail.com</p>
               <p className="flex items-center gap-2"><Phone size={14} className="text-primary" /> (66) 99606-7576</p>
-              <p className="flex items-center gap-2"><MapPin size={14} className="text-primary" /> Brasil</p>
+              <p className="flex items-center gap-2"><MapPin size={14} className="text-primary" /> Sinop, MT – Brasil</p>
             </div>
           </div>
         </div>
