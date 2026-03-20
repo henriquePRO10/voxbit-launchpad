@@ -7,7 +7,7 @@ const baseUrl =
   process.env.NEXT_PUBLIC_SITE_URL ||
   (process.env.NODE_ENV === "development"
     ? "http://localhost:3000"
-    : "https://voxbitsolucoes.com.br");
+    : "https://www.voxbitsolucoes.com.br");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

@@ -17,7 +17,7 @@ const bodyFont = Space_Grotesk({
   display: "swap",
 });
 
-const siteUrl = "https://voxbitsolucoes.com.br";
+const siteUrl = "https://www.voxbitsolucoes.com.br";
 
 const structuredData = {
   "@context": "https://schema.org",
