@@ -27,7 +27,7 @@ const structuredData = {
   image: `${siteUrl}/logo-hero.webp`,
   logo: `${siteUrl}/logo-hero.webp`,
   email: "voxbitinformatica@gmail.com",
-  telephone: "+55 66 99606-7576",
+  telephone: "+55 66 99936-6419",
   address: {
     "@type": "PostalAddress",
     streetAddress: "",
@@ -42,7 +42,7 @@ const structuredData = {
   ],
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+55 66 99606-7576",
+    telephone: "+55 66 99936-6419",
     contactType: "customer service",
     areaServed: "BR",
     availableLanguage: ["pt-BR"],

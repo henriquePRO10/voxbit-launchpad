@@ -99,7 +99,7 @@ Configuracao pronta para Vercel em `vercel.json`:
 ## Contato comercial
 
 - Email: voxbitinformatica@gmail.com
-- WhatsApp: https://wa.me/556696067576
+- WhatsApp: https://wa.me/5566999366419
 
 ---
 
