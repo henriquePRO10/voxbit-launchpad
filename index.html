@@ -13,14 +13,39 @@
 
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="preload" as="image" href="/logo-hero.webp" fetchpriority="high" />
-    <!-- Crisp script removed; using iframe embed instead -->
+    <!-- Crisp script removed; using toggle + iframe embed instead -->
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 
-    <!-- Crisp iframe embed -->
-    <iframe src="https://go.crisp.chat/chat/embed/?website_id=588f1932-1e8f-4870-9811-d9e8caf983e8" width="350px" height="600px" style="position:fixed;right:20px;bottom:20px;border:0;z-index:999999;" title="Chat Crisp"></iframe>
+    <!-- Crisp chat: toggle button + iframe (responsive, accessible) -->
+    <style>
+      #crisp-container { position: fixed; right: 20px; bottom: 20px; z-index: 2147483647; display:flex; flex-direction:column; align-items:flex-end; gap:8px; }
+      #crisp-iframe { width: 360px; height: 640px; border: 0; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); display: none; }
+      #crisp-toggle { width:56px; height:56px; border-radius:50%; background:#0b76ff; color:#fff; display:flex; align-items:center; justify-content:center; font-size:22px; cursor:pointer; box-shadow:0 6px 18px rgba(0,0,0,0.2); border:0; }
+      @media (max-width:420px){
+        #crisp-iframe { width: calc(100vw - 32px); height: 70vh; right: 16px; left: 16px; border-radius:10px; }
+        #crisp-container { right: 8px; bottom: 12px; left: 8px; align-items:center; }
+      }
+    </style>
+
+    <div id="crisp-container" aria-live="polite">
+      <button id="crisp-toggle" aria-expanded="false" aria-controls="crisp-iframe" aria-label="Abrir chat">💬</button>
+      <iframe id="crisp-iframe" title="Chat Crisp" src="https://go.crisp.chat/chat/embed/?website_id=588f1932-1e8f-4870-9811-d9e8caf983e8" aria-hidden="true"></iframe>
+    </div>
+
+    <script>
+      const toggle = document.getElementById('crisp-toggle');
+      const iframe = document.getElementById('crisp-iframe');
+      toggle.addEventListener('click', () => {
+        const isOpen = iframe.style.display === 'block';
+        iframe.style.display = isOpen ? 'none' : 'block';
+        iframe.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+        if (!isOpen) iframe.focus();
+      });
+    </script>
   </body>
 </html>
