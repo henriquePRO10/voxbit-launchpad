@@ -40,7 +40,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-heading font-bold text-foreground">Contato</h4>
             <div className="space-y-3 text-sm text-muted-foreground">
-              <p className="flex items-center gap-2"><Mail size={14} className="text-primary" /> voxbitinformatica@gmail.com</p>
+              <p className="flex items-center gap-2"><Mail size={14} className="text-primary" /> suporte@voxbitsolucoes.com.br</p>
               <p className="flex items-center gap-2"><Phone size={14} className="text-primary" /> (66) 99936-6419</p>
               <p className="flex items-center gap-2"><MapPin size={14} className="text-primary" /> Sinop, MT – Brasil</p>
             </div>
